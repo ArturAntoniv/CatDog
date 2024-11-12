@@ -1,0 +1,69 @@
+.charList {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 колонки на великих екранах */
+	gap: 20px; /* Простір між елементами */
+	padding: 20px;
+  }
+  
+  .charItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	width: 100%;
+  }
+  
+  .charItem img {
+	width: 230px; /* Фіксована ширина для всіх зображень */
+	height: 250px; /* Фіксована висота для всіх зображень */
+	border-radius: 8px;
+	display: block;
+	object-fit: cover; /* Заповнює контейнер, зберігаючи пропорції */
+  }
+  
+ 
+/* Медіа-запит для екрану шириною до 1024px (наприклад, планшети) */
+@media (max-width: 1024px) {
+	.charList {
+	  grid-template-columns: repeat(3, 1fr); /* 3 колонки на середніх екранах */
+	}
+  }
+  
+  /* Медіа-запит для екрану шириною до 768px (мобільні пристрої) */
+  @media (max-width: 768px) {
+	.charList {
+	  grid-template-columns: repeat(2, 1fr); /* 2 колонки на малих екранах */
+	}
+  }
+  
+  /* Медіа-запит для екрану шириною до 480px (дуже маленькі екрани, наприклад, мобільні телефони) */
+  @media (max-width: 480px) {
+	.charList {
+	  grid-template-columns: 1fr; /* 1 колонка на дуже малих екранах */
+	}
+  }
+  
+//---------------------------
+  .charName {
+	font-size: 20px;
+	font-weight: 600; /* Напівжирний текст */
+	color: #ffffff; /* Колір тексту */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 0 10px 0;
+	background-color: rgba(0, 0, 0, 0.2); /* Напівпрозорий чорний фон */
+	border-radius: 8px; /* Округлені краї фону */
+  }
+  
+  .charItem:hover .charName {
+	color: #ffa4a4; /* Змінюємо колір тексту на жовтий при наведенні */
+	font-size: 24px;
+}
+
+.charItem:hover img {
+	transform: scale(1.03); /* Легка анімація при наведенні */
+	transition: transform 0.3s ease-in-out;
+  }

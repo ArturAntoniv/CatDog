@@ -1,0 +1,58 @@
+.searchForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 66.67%; /* 2/3 ширини екрану */
+	max-width: 800px; /* максимальна ширина */
+	margin: 0 auto; /* центруємо по горизонталі */
+  }
+  
+  .searchForm form {
+	display: flex;
+	align-items: center;
+	width: 100%;
+  }
+  
+  .searchForm input[type='search'] {
+	flex: 1;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #924343;
+	border-radius: 4px;
+	outline: none;
+	transition: border-color 0.3s ease;
+  }
+  
+  .searchForm input[type='search']:focus {
+	border-color: #007bff;
+  }
+  
+  .searchForm button {
+	padding: 10px 15px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .searchForm button:hover {
+	background-color: #0056b3;
+  }
+  
+  .searchForm input[type='search']::placeholder {
+	color: #888;
+  }
+  
+  /* Адаптивність для малих екранів */
+  @media (max-width: 768px) {
+	.searchForm {
+	  width: 90%; /* На менших екранах ширина форми 90% */
+	}
+  }
+  

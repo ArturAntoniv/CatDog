@@ -1,0 +1,104 @@
+
+
+.charElement {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .char {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .char img {
+	width: 100%;
+	height: auto; /* Однакова висота для зображень */
+	object-fit: cover;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .char:hover {
+	transform: scale(1.03);
+  }
+  
+  .charDescription {
+	padding: 20px;
+	background-color: #aec5db;
+	width: 100%;
+	text-align: left;
+  }
+  
+  .charDescription h2 {
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #333;
+  }
+  
+  .charDescription p {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #555;
+  }
+  
+  .charDescription a {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: bold;
+  }
+  
+  .charDescription a:hover {
+	text-decoration: underline;
+  }
+  
+  /* Адаптивність для малих екранів */
+  @media (max-width: 768px) {
+	.charElement {
+	  width: 95%;
+	}
+  
+	.char img {
+	  height: 250px;
+	}
+  }
+
+
+
+
+ // Стилі для фотографій
+.charPhoto {
+	padding: 30px 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px; /* Відстань між зображеннями */
+	justify-content: center; /* Центруємо зображення в рядку */
+  }
+  
+  .photo-container {
+	width: 230px; /* Фіксована ширина для всіх зображень */
+	height: 250px; /* Фіксована висота для всіх зображень */
+	overflow: hidden;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .photo-container img {
+	width: 100%; /* Зображення займає всю ширину контейнера */
+	height: 100%; /* Зображення займає всю висоту контейнера */
+	object-fit: cover; /* Забезпечує, щоб зображення заповнило контейнер */
+  }
